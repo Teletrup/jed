@@ -1,0 +1,25 @@
+.ed {
+  width: 450;
+  height: 300;
+  font-size: 12pt;
+  font-family: monospace;
+  display: flex;
+  border: solid black;
+  word-wrap: break-word;
+}
+
+.ed-text {
+  overflow-x: auto;
+  white-space: nowrap;
+  flex: 1;
+  outline: 0px;
+  padding-left: 0.2em;
+}
+
+.ed-gutters {
+  padding-right: 0.2em;
+  width: 1em;
+  background-color: red;
+  text-align: right;
+}
+

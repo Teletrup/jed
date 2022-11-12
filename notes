@@ -1,0 +1,189 @@
+cool live coding environment
+editor
+kreck evaluation
+debugger
+canvas
+
+
+vim-like editor
+  codemirror looks cool but it's also bloat
+    is it really?
+      It's bigger than templeOS
+
+todo
+  cursor centering
+  relative gutters
+  modes
+
+cursor position
+  line & char
+scroller position
+
+char matrix?
+lines
+
+line numbers
+  text floats right
+
+it doesn't have to be polished up
+it should be useful
+
+no line elements?
+
+inner text of div with bold, font, etc.
+
+what happens to inner text when I edit it and it's distributed over many elements?
+
+how inner text gets determined
+
+why min-width = 0 fixes it?
+
+making the editor border highlighted when contents are edited
+  1
+    what?
+      whole editor contenteditable
+      elements that shouldn't be editable, have it disabled
+    something borke!
+      ed-text divs get added when inserting newlines
+        suppress insertParagraph input events?
+  2
+    what?
+      do it with events
+
+createrange
+
+"pre" white space
+
+contenteditable in cm
+
+pasting with formatting bug?
+
+more visible cursor
+
+describe this whole selector:
+.ed-text {
+  overflow-x: auto;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+paragraph insert event
+
+
+identifying stuff to highlight
+  where to insert tags?
+    dumb hack
+      how
+        insert something like <nonce> </nonce> into innerText
+        find it in innerHtml
+        replace it with appropriate tags
+      why dumb?
+    but for coloring parens, you can just walk over html
+
+centering cursor
+  with scroller
+    editing scroller position
+
+events with editable content
+  input
+  no select
+
+weird updates
+  text, html, dom
+
+
+fixed number of lines updated from buffer?
+  problem with selection
+
+undo, redo?
+  textarea
+
+roles
+  do roles actually do anything?
+  textbox
+
+  
+reversing cm
+
+
+one leading <br> in div seems to not do anything
+but two do
+
+css selectors
+  z-index
+    elements with higher z-index are on top
+  overflow-x
+  align-items
+  line-height
+    height of lines (not glyphs)
+
+block-level
+
+display
+  block
+  inline
+  inline-block
+  grid
+  flex
+
+p vs div vs span
+
+why cm uses divs instead of spans?
+  try with block display and spans
+    without block displays, changing stuff to spans breaks it irreversibly
+
+
+"focused" class
+
+how flexbox works
+
+selection and cursor layers
+content div holds lines
+no textarea element
+
+
+I'd like a textarea
+  or maybe a div
+no wrapping
+  that makes gutters a bit easier
+capturing buffer mutating events
+gutters and stuff 
+
+textarea events
+  input-event (copy, cut, paste)
+  select
+
+overriding default behavior
+  preventDefault
+    on textarea it prevented input keys, but not browser shortcuts
+
+tabbing out
+
+is default textarea behavior handled by event listeners?
+  no, it prolly works with JS disabled
+
+disabling selection
+  user-select: none
+  doesn't work for textareas
+
+listener properties vs. other listeners
+
+what's aria?
+  accessability stuff
+
+view
+window & document
+
+does monitorEvents also monitor children?
+
+do unimplemented events fire?
+
+mousedown in child overrides click events
+do children override parents?
+  child's events fire first
+
+for mouse events, the target is always the deepest element
+
+
+$0
+  last selected element in devtools
