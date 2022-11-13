@@ -9,7 +9,7 @@
 }
 
 .ed-text {
-  overflow-x: auto;
+  overflow-x: scroll;
   white-space: nowrap;
   flex: 1;
   outline: 0px;

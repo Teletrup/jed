@@ -4,6 +4,7 @@ kreck evaluation
 debugger
 canvas
 
+are attributes case insensitive?
 
 vim-like editor
   codemirror looks cool but it's also bloat
@@ -11,13 +12,21 @@ vim-like editor
       It's bigger than templeOS
 
 todo
-  cursor centering
+	bottom bar
+	prettier scrollbar
+	resizing sans scroller
+  caret centering
+    center regardless of selection?
+      unvimlike, but seems easier
   relative gutters
   modes
+  matching paren
+  raibow parens
 
-cursor position
+caret position
   line & char
 scroller position
+  el.scrollTop
 
 char matrix?
 lines
