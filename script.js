@@ -28,10 +28,11 @@ function getCaret(element) {
   const xoff = ebox.x + parseFloat(getComputedStyle(element).paddingLeft);
   const yoff = ebox.y + parseFloat(getComputedStyle(element).paddingTop) - element.scrollTop;
   const crange = getContentRange(element);
+  const charHeight = 18.75; //TODO do it properly
   ret.idx = crange.toString().length;
   ret.x = rbox.x - xoff;
   ret.y = rbox.y - yoff;
   ret.col = range.endOffset;
-  ret.row = 0;
+  ret.row = Math.floor(ret.y / charHeight);
   return ret;
 }
