@@ -24,9 +24,27 @@ todo
   raibow parens
 
 caret position
-  line & char
+  char
+    done
+  x & y
+    selRange.getBoundingClientRect()
+    offset from ed-text element + padding
+    also scrollers
+  col
+    from end element
+      something weird with S+Enter
+  row
+    y / end element height
+
+
+it's Element.getContentRects, but it works on ranges too?
+
+
 scroller position
   el.scrollTop
+discrete scroller?
+
+gutters recalculated based on scroller and caret position
 
 char matrix?
 lines
