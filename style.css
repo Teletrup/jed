@@ -1,19 +1,24 @@
 .ed {
-  width: 450;
-  height: 300;
   font-size: 12pt;
   font-family: monospace;
-  display: flex;
   border: solid black;
+  width: 450;
+}
+.ed-center {
+  display: flex;
+  width: 100%;
+  height: 300;
   word-wrap: break-word;
 }
 
-.ed-text {
-  overflow-x: scroll;
-  white-space: nowrap;
+.foo {
   flex: 1;
   outline: 0px;
+  overflow-x: scroll;
   padding-left: 0.2em;
+  position: relative;
+}
+.ed-text {
 }
 
 .ed-gutters {
@@ -23,3 +28,20 @@
   text-align: right;
 }
 
+.ed-bar {
+  text-align: right;
+  background-color: red;
+  border-top: solid black;
+}
+
+.ed-sample-glyph {
+  visibility: hidden;
+}
+
+.ed-caret {
+  z-index: 1;
+  top: 0;
+  position: absolute;
+  background-color: purple;
+  color: white;
+}

@@ -2,14 +2,23 @@
   <link rel='stylesheet' type='text/css' href='style.css'>
   <script src='script.js'></script>
 </head>
-<body onload='initText(event)'>
+<body onload='init()'>
   <div class='ed'>
-    <div class='ed-gutters'>
-      <div>0</div>
-      <div>1</div>
-      <div>2</div>
+    <div class='ed-center'>
+      <div class='ed-gutters'>
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+      </div>
+      <div class='foo'>
+      <div class='ed-text'>
+      </div>
+      <div class='ed-caret'>l</div>
+      </div>
     </div>
-    <div class='ed-text' contenteditable>
+    <div class='ed-bar'>
+			<span class='ed-sample-glyph'>a</span>
+      abcdef
     </div>
   </div>
 </body>

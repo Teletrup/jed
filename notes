@@ -4,15 +4,41 @@ kreck evaluation
 debugger
 canvas
 
+doing it like a terminal app
+
 are attributes case insensitive?
+  yeah, but they map to lowercase in dom
 
 vim-like editor
   codemirror looks cool but it's also bloat
     is it really?
       It's bigger than templeOS
 
+newline caret problem
+	newlines doesn't count
+suppress inserting divs?
+	nothing to do wiht divs
+		innerText='\n\n\nabc'
+
+so CM seems to reimplement the selection, caret, etc
+unfortunately the smallest example requires 3 imports
+  so?
+  it seems cool now tbh,
+
+text in a non-editable div
+  caret as a div
+  scroller moves the caret
+
+knowing col without iterating through text
+
+unix ed
+
+codemirror system guide
+
+rect of empty selection
+
 todo
-	bottom bar
+  events
 	prettier scrollbar
 	resizing sans scroller
   caret centering
@@ -38,6 +64,8 @@ caret position
 
 
 it's Element.getContentRects, but it works on ranges too?
+
+examine empty rects more closely
 
 
 scroller position
@@ -214,3 +242,9 @@ for mouse events, the target is always the deepest element
 
 $0
   last selected element in devtools
+
+sound stuff
+  webaudio API
+  AudioNode
+
+

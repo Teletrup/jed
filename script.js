@@ -36,3 +36,27 @@ function getCaret(element) {
   ret.row = Math.floor(ret.y / charHeight);
   return ret;
 }
+
+function updateBar(e) {
+  caret = getCaret(e.target);
+  $('.ed-bar').innerText = `${caret.idx}  ${caret.row},${caret.col}`;
+}
+
+function init() {
+  initText();
+  sg = $('.ed-sample-glyph');
+  sr = sg.getBoundingClientRect();
+  ct = $('.ed-caret');
+  ct.style.width = sr.width;
+  ct.style.height = sr.height;
+  $('.ed-text').onclick = updateBar;
+  $('.ed-text').onkeydown = updateBar;
+  $('.ed-text').oninput = updateBar;
+}
+//editor instantiation & css classes
+//component initialization
+
+//Caret as class?
+//It makes sense, because init is expensive and update is cheap
+//phantom glyph?
+
